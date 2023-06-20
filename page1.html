@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farming Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <script src="javascript.js"></script>
+  <body>
+    <img src="images/frame.jpg" alt="" id="background-image" />
+  </body>
+  <div class="container-fluid body">
+    <div class="container text-center">
+      <div class="row row-cols-4 g-5 grid justify-content-center">
+        <a class="coll" onclick="soundOn('sounds/core/sub.m4a','subject.html')"
+          ><div class="col">Subject</div></a
+        >
+        <a class="coll" onclick="soundOn('sounds/core/verb.m4a','verb.html')"
+          ><div class="col">Verb</div></a
+        >
+        <a
+          class="coll"
+          onclick="soundOn('sounds/core/object.m4a','object.html')"
+          ><div class="col">Object</div></a
+        >
+      </div>
+    </div>
+  </div>
+</html>

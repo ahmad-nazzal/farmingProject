@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farming Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="javascript.js"></script>
+  </head>
+  <body>
+    <img src="images/frame.jpg" alt="" id="background-image" />
+  </body>
+  <div class="container-fluid body">
+    <div class="container text-center">
+      <div id="imgs-input"></div>
+      <button class="bg-warning btn" onclick="deleteAll()">Delete All</button>
+      <button class="bg-warning btn delete" onclick="deleteItem()">
+        Delete
+      </button>
+      <button class="bg-warning btn speak" onclick="speak()">Speak</button>
+      <div id="chat" class="farm">
+        <div class="row row-cols-5 grid chatDAlign farm">
+          <button class="colll coll p-0">
+            <div class="col">
+              <img
+                onclick="addItem('images/Trees/IMG-2023061950.jpg','sounds/apple tree.m4a')"
+                src="images/Trees/IMG-20230619-WA0050.jpg"
+                class="images"
+                alt=""
+              />
+            </div>
+          </button>
+          <button class="colll coll p-0">
+            <div class="col">
+              <img
+                onclick="addItem('images/Trees/IMG-20230619-WA0051.jpg','sounds/orange tree.m4a')"
+                src="images/Trees/IMG-20230619-WA0051.jpg"
+                class="images"
+                alt=""
+              />
+            </div>
+          </button>
+          <button class="colll coll p-0">
+            <div class="col">
+              <img
+                onclick="addItem('images/Trees/IMG-20230619-WA0052.jpg','sounds/limon tree.m4a')"
+                src="images/Trees/IMG-20230619-WA0052.jpg"
+                class="images"
+                alt=""
+              />
+            </div>
+          </button>
+          <button class="colll coll p-0">
+            <div class="col">
+              <img
+                onclick="addItem('images/Trees/IMG-20230619-WA0053.jpg','sounds/lava tree.m4a')"
+                src="images/Trees/IMG-20230619-WA0053.jpg"
+                class="images"
+                alt=""
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

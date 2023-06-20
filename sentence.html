@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farming Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="javascript.js"></script>
+  </head>
+  <body>
+    <img src="images/frame.jpg" alt="" id="background-image" />
+  </body>
+  <div class="container-fluid body">
+    <div class="container text-center">
+      <div id="imgs-input"></div>
+      <button class="bg-warning btn" onclick="deleteAll()">Delete All</button>
+      <button class="bg-warning btn delete" onclick="deleteItem()">
+        Delete
+      </button>
+      <button class="bg-warning btn speak" onclick="speak()">Speak</button>
+      <div id="chat" class="alignG">
+        <div class="row row-cols-6 grid chatDAlign">
+          <button class="colll coll p-0">
+            <div class="col">
+              <img
+                onclick="addItem('images/Sentence-starters/IMG-20230619-WA0003.jpg','sounds/I like.m4a')"
+                src="images/Sentence-starters/IMG-20230619-WA0003.jpg"
+                class="images"
+                alt=""
+              />
+            </div>
+          </button>
+          <button class="colll coll p-0">
+            <div class="col">
+              <img
+                onclick="addItem('images/Sentence-starters/IMG-20230619-WA0004.jpg','sounds/I don’t want.m4a')"
+                src="images/Sentence-starters/IMG-20230619-WA0004.jpg"
+                class="images"
+                alt=""
+              />
+            </div>
+          </button>
+          <button class="colll coll p-0">
+            <div class="col">
+              <img
+                onclick="addItem('images/Sentence-starters/IMG-20230619-WA0005.jpg','sounds/I feel.m4a')"
+                src="images/Sentence-starters/IMG-20230619-WA0005.jpg"
+                class="images"
+                alt=""
+              />
+            </div>
+          </button>
+          <button class="colll coll p-0">
+            <div class="col">
+              <img
+                onclick="addItem('images/Sentence-starters/IMG-20230619-WA0006.jpg','sounds/I see.m4a')"
+                src="images/Sentence-starters/IMG-20230619-WA0006.jpg"
+                class="images"
+                alt=""
+              />
+            </div>
+          </button>
+          <button class="colll coll p-0">
+            <div class="col">
+              <img
+                onclick="addItem('images/Sentence-starters/IMG-20230619-WA0007.jpg','sounds/My name is.m4a')"
+                src="images/Sentence-starters/IMG-20230619-WA0007.jpg"
+                class="images"
+                alt=""
+              />
+            </div>
+          </button>
+          <button class="colll coll p-0">
+            <div class="col">
+              <img
+                onclick="addItem('images/Sentence-starters/IMG-20230619-WA0008.jpg','sounds/I want.m4a')"
+                src="images/Sentence-starters/IMG-20230619-WA0008.jpg"
+                class="images"
+                alt=""
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
