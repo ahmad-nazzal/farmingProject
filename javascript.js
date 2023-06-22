@@ -1,5 +1,6 @@
 let sounds = [];
-function addItem(link, sound) {
+
+function addItem(link, sound, goTo, hidin) {
   sounds.push(sound);
   let inputt = document.getElementById("imgs-input");
   const node = document.createElement("img");
@@ -9,6 +10,8 @@ function addItem(link, sound) {
   inputt.appendChild(node);
   var audio = new Audio(sound);
   audio.play();
+  document.getElementById(hidin).style.display = "none";
+  document.getElementById(goTo).style.display = "flex";
 }
 
 function deleteAll() {
@@ -34,7 +37,7 @@ async function speak() {
   }
 }
 
-async function soundOn(sound, goTo) {
+async function soundOn(sound, goTo, hidin) {
   var audio = new Audio(sound);
   audio.play();
   if (
@@ -50,5 +53,8 @@ async function soundOn(sound, goTo) {
     await sleep(2000);
   else await sleep(1000);
 
-  window.location.href = goTo;
+  document.getElementById(hidin).style.display = "none";
+  document.getElementById(goTo).style.display = "block";
+
+  // window.location.href = goTo;
 }

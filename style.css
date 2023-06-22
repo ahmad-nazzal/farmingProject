@@ -161,3 +161,24 @@
   gap: 70px;
   right: 30% !important;
 }
+
+#object,
+#subject,
+#verb,
+#sentence,
+#core,
+#daily,
+#farmingg,
+#treess,
+#placee,
+#foodd,
+#chatt,
+#animall {
+  display: none;
+}
+#homee {
+  font-size: 25px;
+  position: fixed;
+  bottom: 50px;
+  right: 150px;
+}

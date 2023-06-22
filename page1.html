@@ -13,25 +13,1000 @@
       rel="stylesheet"
       href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
     />
+    <script src="page1.js"></script>
+    <script src="javascript.js"></script>
   </head>
-  <script src="javascript.js"></script>
   <body>
     <img src="images/frame.jpg" alt="" id="background-image" />
+    <a href="index.html" id="homee"> <i class="bi bi-house-door-fill"></i></a>
   </body>
   <div class="container-fluid body">
     <div class="container text-center">
-      <div class="row row-cols-4 g-5 grid justify-content-center">
-        <a class="coll" onclick="soundOn('sounds/core/sub.m4a','subject.html')"
+      <div id="imgs-input"></div>
+      <button class="bg-warning btn" onclick="deleteAll()">Delete All</button>
+      <button class="bg-warning btn delete" onclick="deleteItem()">
+        Delete
+      </button>
+      <button class="bg-warning btn speak" onclick="speak()">Speak</button>
+      <div id="original" class="row row-cols-4 g-5 grid justify-content-center">
+        <a
+          class="coll"
+          onclick="soundOn('sounds/core/sub.m4a','subject','original')"
           ><div class="col">Subject</div></a
         >
-        <a class="coll" onclick="soundOn('sounds/core/verb.m4a','verb.html')"
+        <a
+          class="coll"
+          onclick="soundOn('sounds/core/verb.m4a','verb','original')"
           ><div class="col">Verb</div></a
         >
         <a
           class="coll"
-          onclick="soundOn('sounds/core/object.m4a','object.html')"
+          onclick="soundOn('sounds/core/object.m4a','object','original')"
           ><div class="col">Object</div></a
         >
+      </div>
+      <div id="object" class="container-fluid body">
+        <div class="container text-center">
+          <div class="row row-cols-6 grid">
+            <a
+              class="coll"
+              onclick="soundOn('sounds/animal.m4a','animall','object')"
+              ><div class="col">Animals</div></a
+            >
+            <a
+              class="coll"
+              onclick="soundOn('sounds/Chat.m4a','chatt','object')"
+              ><div class="col">Chat</div></a
+            >
+            <a
+              class="coll"
+              onclick="soundOn('sounds/Food.m4a','foodd','object')"
+              ><div class="col">Food</div></a
+            >
+            <a
+              class="coll"
+              onclick="soundOn('sounds/Places.m4a','placee','object')"
+              ><div class="col">Places</div></a
+            >
+            <a
+              class="coll"
+              onclick="soundOn('sounds/trees.m4a','treess','object')"
+              ><div class="col">Trees</div></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div id="animall">
+        <div id="chat" class="farm">
+          <div class="row row-cols-5 grid farm chatDAlign">
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Animals/IMG-20230619-WA0054.jpg','sounds/chiken.m4a','original','animall')"
+                  src="images/Animals/IMG-20230619-WA0054.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Animals/IMG-20230619-WA0055.jpg','sounds/cow.m4a','original','animall')"
+                  src="images/Animals/IMG-20230619-WA0055.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Animals/IMG-20230619-WA0056.jpg','sounds/goat.m4a','original','animall')"
+                  src="images/Animals/IMG-20230619-WA0056.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Animals/IMG-20230619-WA0057.jpg','sounds/horse.m4a','original','animall')"
+                  src="images/Animals/IMG-20230619-WA0057.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="chatt">
+        <div id="chat">
+          <div class="row row-cols-6 grid chatDAlign">
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0020.jpg','sounds/No.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0020.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0021.jpg','sounds/How.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0021.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0022.jpg','sounds/Yes.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0022.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0023.jpg','sounds/What.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0023.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0032.jpg','sounds/Hello.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0032.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0031.jpg','sounds/Bye.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0031.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0030.jpg','sounds/Please.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0030.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0029.jpg','sounds/OK.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0029.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0028.jpg','sounds/Iam good.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0028.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0027.jpg','sounds/Not good.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0027.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0026.jpg','sounds/Why.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0026.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0025.jpg','sounds/When.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0025.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Chat/IMG-20230619-WA0024.jpg','sounds/Thank you.m4a','original','chatt')"
+                  src="images/Chat/IMG-20230619-WA0024.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="foodd">
+        <div id="chat">
+          <div class="row row-cols-6 grid chatDAlign">
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0009.jpg','sounds/Water.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0009.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0010.jpg','sounds/Drink.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0010.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0011.jpg','sounds/Pasta.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0011.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0012.jpg','sounds/Rice.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0012.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0013.jpg','sounds/Food.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0013.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0014.jpg','sounds/Milk.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0014.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0015.jpg','sounds/Orange juice.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0015.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0016.jpg','sounds/Banana.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0016.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0017.jpg','sounds/Apple.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0017.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0018.jpg','sounds/Pizza.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0018.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Food/IMG-20230619-WA0019.jpg','sounds/Apple juice.m4a','original','foodd')"
+                  src="images/Food/IMG-20230619-WA0019.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="placee">
+        <div id="chat" class="alignG">
+          <div class="row row-cols-6 grid chatDAlign farm">
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Places/IMG-20230619-WA0033.jpg','sounds/Garden.m4a','original','placee')"
+                  src="images/Places/IMG-20230619-WA0033.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Places/IMG-20230619-WA0034.jpg','sounds/Shopping.m4a','original','placee')"
+                  src="images/Places/IMG-20230619-WA0034.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Places/IMG-20230619-WA0035.jpg','sounds/Home.m4a','original','placee')"
+                  src="images/Places/IMG-20230619-WA0035.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Places/IMG-20230619-WA0036.jpg','sounds/Where are you going.m4a','original','placee')"
+                  src="images/Places/IMG-20230619-WA0036.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Places/IMG-20230619-WA0037.jpg','sounds/Inside.m4a','original','placee')"
+                  src="images/Places/IMG-20230619-WA0037.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="treess">
+        <div id="chat" class="farm">
+          <div class="row row-cols-5 grid chatDAlign farm">
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Trees/IMG-20230619-WA0050.jpg','sounds/apple tree.m4a','original','treess')"
+                  src="images/Trees/IMG-20230619-WA0050.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Trees/IMG-20230619-WA0051.jpg','sounds/orange tree.m4a','original','treess')"
+                  src="images/Trees/IMG-20230619-WA0051.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Trees/IMG-20230619-WA0052.jpg','sounds/limon tree.m4a','original','treess')"
+                  src="images/Trees/IMG-20230619-WA0052.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Trees/IMG-20230619-WA0053.jpg','sounds/lava tree.m4a','original','treess')"
+                  src="images/Trees/IMG-20230619-WA0053.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="subject" class="container-fluid body">
+        <div class="container text-center">
+          <div class="row row-cols-3 justify-content-center grid">
+            <a
+              class="coll"
+              onclick="soundOn('sounds/core/sentece.m4a','sentence','subject')"
+              ><div class="col">Sentence starters</div></a
+            >
+            <a
+              class="coll"
+              onclick="soundOn('sounds/core/core basic.m4a','core','subject')"
+              ><div class="col">Core basic</div></a
+            >
+          </div>
+        </div>
+      </div>
+      <div id="sentence">
+        <div id="chat" class="alignG">
+          <div class="row row-cols-6 grid chatDAlign">
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Sentence-starters/IMG-20230619-WA0003.jpg','sounds/I like.m4a','original','sentence')"
+                  src="images/Sentence-starters/IMG-20230619-WA0003.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Sentence-starters/IMG-20230619-WA0004.jpg','sounds/I don’t want.m4a','original','sentence')"
+                  src="images/Sentence-starters/IMG-20230619-WA0004.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Sentence-starters/IMG-20230619-WA0005.jpg','sounds/I feel.m4a','original','sentence')"
+                  src="images/Sentence-starters/IMG-20230619-WA0005.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Sentence-starters/IMG-20230619-WA0006.jpg','sounds/I see.m4a','original','sentence')"
+                  src="images/Sentence-starters/IMG-20230619-WA0006.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Sentence-starters/IMG-20230619-WA0007.jpg','sounds/My name is.m4a','original','sentence')"
+                  src="images/Sentence-starters/IMG-20230619-WA0007.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Sentence-starters/IMG-20230619-WA0008.jpg','sounds/I want.m4a')"
+                  src="images/Sentence-starters/IMG-20230619-WA0008.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="core">
+        <div id="chat">
+          <div class="row row-cols-6 grid chatDAlign">
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0030.jpg','sounds/core/you.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0030.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0031.jpg','sounds/core/ii.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0031.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0032.jpg','sounds/core/she.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0032.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0033.jpg','sounds/core/iitt.opus')"
+                  src="images/core/IMG-20230620-WA0033.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0034.jpg','sounds/core/that.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0034.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0035.jpg','sounds/core/like.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0035.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0036.jpg','sounds/core/want.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0036.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0037.jpg','sounds/core/see.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0037.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0038.jpg','sounds/core/do.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0038.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0039.jpg','sounds/core/he.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0039.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0040.jpg','sounds/core/can.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0040.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0041.jpg','sounds/core/put.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0041.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0042.jpg','sounds/core/feel.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0042.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0043.jpg','sounds/core/go.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0043.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0044.jpg','sounds/core/look.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0044.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0045.jpg','sounds/core/help.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0045.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0046.jpg','sounds/core/finish.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0046.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0047.jpg','sounds/core/stop.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0047.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0048.jpg','sounds/core/open.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0048.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0049.jpg','sounds/core/same.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0049.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0050.jpg','sounds/core/not.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0050.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0051.jpg','sounds/core/get.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0051.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0052.jpg','sounds/core/different.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0052.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0053.jpg','sounds/core/good.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0053.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0054.jpg','sounds/core/more.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0054.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0055.jpg','sounds/core/up.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0055.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0056.jpg','sounds/core/bad.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0056.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0057.jpg','sounds/core/here.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0057.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0058.jpg','sounds/core/some.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0058.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0059.jpg','sounds/core/in.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0059.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0060.jpg','sounds/core/all.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0060.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0061.jpg','sounds/core/on.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0061.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/core/IMG-20230620-WA0062.jpg','sounds/core/down.m4a','original','core')"
+                  src="images/core/IMG-20230620-WA0062.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="verb" class="container-fluid body">
+        <div class="container text-center">
+          <div class="row row-cols-3 justify-content-center grid">
+            <a
+              class="coll"
+              onclick="soundOn('sounds/daily life.m4a','daily','verb')"
+              ><div class="col">Daily life</div></a
+            >
+            <a
+              class="coll"
+              onclick="soundOn('sounds/farming verbs.m4a','farmingg','verb')"
+              ><div class="col">Farming verbs</div></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div id="daily">
+        <div id="chat" class="alignG">
+          <div class="row row-cols-4 grid chatDAlign">
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Daily-life/IMG-20230619-WA0039.jpg','sounds/prepare.m4a','original','daily')"
+                  src="images/Daily-life/IMG-20230619-WA0039.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Daily-life/IMG-20230619-WA0041.jpg','sounds/play.m4a','original','daily')"
+                  src="images/Daily-life/IMG-20230619-WA0041.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Daily-life/IMG-20230619-WA0042.jpg','sounds/ironing clothes.m4a','original','daily')"
+                  src="images/Daily-life/IMG-20230619-WA0042.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Daily-life/IMG-20230619-WA0043.jpg','sounds/cooke.m4a','original','daily')"
+                  src="images/Daily-life/IMG-20230619-WA0043.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Daily-life/IMG-20230619-WA0044.jpg','sounds/arrange.m4a','original','daily')"
+                  src="images/Daily-life/IMG-20230619-WA0044.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="farmingg">
+        <div id="chat" class="alignG farm">
+          <div class="row row-cols-4 grid farm chatDAlign">
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Farming-verbs/IMG-20230619-WA0046.jpg','sounds/watring.m4a','original','farmingg')"
+                  src="images/Farming-verbs/IMG-20230619-WA0046.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Farming-verbs/IMG-20230619-WA0048.jpg','sounds/core/plant.m4a','original','farmingg')"
+                  src="images/Farming-verbs/IMG-20230619-WA0048.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+            <button class="colll coll p-0">
+              <div class="col">
+                <img
+                  onclick="addItem('images/Farming-verbs/IMG-20230619-WA0049.jpg','sounds/reap.m4a','original','farmingg')"
+                  src="images/Farming-verbs/IMG-20230619-WA0049.jpg"
+                  class="images"
+                  alt=""
+                />
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
